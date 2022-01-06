@@ -18,7 +18,8 @@ object Module {
     @Provides
     @Singleton
     fun provideOkKttpClient(): OkHttpClient{
-        return OkHttpClient()
+        return OkHttpClient().newBuilder()
+            .build()
     }
 
     @Provides
