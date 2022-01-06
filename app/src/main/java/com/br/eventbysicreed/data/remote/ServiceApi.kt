@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface ServiceApi {
 
     @GET("events")
-    suspend fun list(): Response<EventModel>
+    suspend fun list(): Response<List<EventModel>>
 }
