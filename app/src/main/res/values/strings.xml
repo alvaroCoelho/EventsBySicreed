@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EventsBySicreed</string>
+    <string name="tv_item_description">Descrição</string>
 </resources>
