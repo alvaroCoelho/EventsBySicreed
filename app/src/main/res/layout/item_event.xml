@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/black"
+    app:cardCornerRadius="5dp"
+    app:cardMaxElevation="2dp"
+    app:strokeColor="@color/white"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imgEvent"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitleEvent"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tx_item_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/imgEvent"
+            app:layout_constraintTop_toBottomOf="@+id/imgEvent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDescriptionEvent"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tv_item_description"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleEvent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleEvent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDateEvent"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tv_item_date"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDescriptionEvent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionEvent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPriceEvent"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tv_item_price"
+            android:textAlignment="inherit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDateEvent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateEvent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
