@@ -23,6 +23,11 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
         super.onViewCreated(view, savedInstanceState)
         eventModel = args.event
         onLoadEvent(eventModel)
+        setupClickListeners()
+    }
+
+    private fun setupClickListeners() = with(binding){
+        btnCheckin.setOnClickListener { viewModel.checkin() }
     }
 
     private fun onLoadEvent(eventModel: EventModel)= with(binding){

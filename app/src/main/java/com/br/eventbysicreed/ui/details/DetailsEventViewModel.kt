@@ -47,4 +47,9 @@ class DetailsEventViewModel @Inject constructor(
         return ResourceState.Error(response.message())
     }
 
+ fun checkin(){
+
+ }
+
+
 }
