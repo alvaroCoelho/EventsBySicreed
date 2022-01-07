@@ -9,6 +9,7 @@ import androidx.navigation.fragment.navArgs
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentDetailsEventBinding
 import com.br.eventbysicreed.ui.base.BaseFragment
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,6 +27,12 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
 
     private fun onLoadEvent(eventModel: EventModel)= with(binding){
         tvNameEventDetails.text = eventModel.title
+        tvDescriptionEventDetails.text = eventModel.description
+        tvPriceEventDetails.text = eventModel.price
+        tvDateEventDetails.text = eventModel.date
+        Glide.with(requireContext())
+            .load(eventModel.image.toString())
+            .into(imgEventDetails)
 
     }
 
