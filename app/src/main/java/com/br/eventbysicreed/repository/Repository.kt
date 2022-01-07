@@ -8,4 +8,5 @@ class Repository @Inject constructor(
 ) {
 
     suspend fun list() = api.list()
+    suspend fun getEvent(id: Int) = api.getEvent(id)
 }
