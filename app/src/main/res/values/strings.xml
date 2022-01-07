@@ -5,4 +5,6 @@
     <string name="tv_item_date">Data do Evento</string>
     <string name="tv_item_price">Preço do evento</string>
     <string name="an_error_occurred">Um erro foi encontrado</string>
+    <string name="checkin">Checkin</string>
+    <string name="share">Compartilhar</string>
 </resources>
