@@ -21,33 +21,11 @@ class DetailsEventViewModel @Inject constructor(
     private val _details = MutableStateFlow<ResourceState<EventModel>>(ResourceState.Loading())
     val details: StateFlow<ResourceState<EventModel>> = _details
 
-    fun fetch(eventId: Int) = viewModelScope.launch{
-        safeFetch(eventId)
-    }
 
-    private suspend fun safeFetch(eventId: Int) {
-        _details.value = ResourceState.Loading()
-        try {
-            val response = repository.getEvent(eventId)
-            _details.value = handleResponse(response)
-        }catch (throwable: Throwable){
-            when(throwable){
-                is IOException -> _details.value = ResourceState.Error("Erro de rede")
-                else -> _details.value = ResourceState.Error("Erro de conversão")
-            }
-        }
-    }
 
-    private fun handleResponse(response: Response<EventModel>): ResourceState<EventModel> {
-        if(response.isSuccessful){
-            response.body()?.let { values ->
-                return ResourceState.Sucess(values)
-            }
-        }
-        return ResourceState.Error(response.message())
-    }
+ fun checkin() = viewModelScope.launch{
 
- fun checkin(){
+
 
  }
 
