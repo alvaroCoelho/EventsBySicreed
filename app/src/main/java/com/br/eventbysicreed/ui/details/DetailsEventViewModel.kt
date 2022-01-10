@@ -21,13 +21,4 @@ class DetailsEventViewModel @Inject constructor(
     private val _details = MutableStateFlow<ResourceState<EventModel>>(ResourceState.Loading())
     val details: StateFlow<ResourceState<EventModel>> = _details
 
-
-
- fun checkin() = viewModelScope.launch{
-
-
-
- }
-
-
 }
