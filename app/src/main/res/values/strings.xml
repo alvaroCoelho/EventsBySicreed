@@ -7,4 +7,7 @@
     <string name="an_error_occurred">Um erro foi encontrado</string>
     <string name="checkin">Checkin</string>
     <string name="share">Compartilhar</string>
+    <string name="type_your_name_here">Digite seu nome aqui</string>
+    <string name="type_your_email_here">Digite seu email aqui</string>
+    <string name="confirm">Confirmar</string>
 </resources>

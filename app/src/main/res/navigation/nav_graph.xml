@@ -13,6 +13,9 @@
         <argument
             android:name="event"
             app:argType="com.br.eventbysicreed.data.model.event.EventModel" />
+        <action
+            android:id="@+id/action_detailsEventFragment_to_checkinEventFragment"
+            app:destination="@id/checkinEventFragment" />
     </fragment>
     <fragment
         android:id="@+id/listEventFragment"
@@ -22,5 +25,14 @@
         <action
             android:id="@+id/action_listEventFragment_to_detailsEventFragment"
             app:destination="@id/detailsEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkinEventFragment"
+        tools:layout="@layout/fragment_checkin_event"
+        android:name="com.br.eventbysicreed.ui.checkin.CheckinEventFragment"
+        android:label="CheckinEventFragment" >
+        <argument
+            android:name="event"
+            app:argType="com.br.eventbysicreed.data.model.event.EventModel" />
     </fragment>
 </navigation>

@@ -11,12 +11,5 @@ interface ServiceApi {
     suspend fun list(): Response<List<EventModel>>
 
 
-    @GET("events/{id}")
-    suspend fun getEvent(
-        @Path(
-            value = "idd",
-            encoded = true
-        )characterId: Int
 
-    ): Response<EventModel>
 }

@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.br.eventbysicreed.data.model.checkin.CheckinModel
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentDetailsEventBinding
 import com.br.eventbysicreed.ui.base.BaseFragment
@@ -27,7 +29,11 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
     }
 
     private fun setupClickListeners() = with(binding){
-        btnCheckin.setOnClickListener { viewModel.checkin() }
+        btnCheckin.setOnClickListener {
+            val action = DetailsEventFragmentDirections.
+            actionDetailsEventFragmentToCheckinEventFragment(eventModel)
+            findNavController().navigate(action)
+             }
     }
 
     private fun onLoadEvent(eventModel: EventModel)= with(binding){
@@ -39,7 +45,12 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
             .load(eventModel.image.toString())
             .into(imgEventDetails)
 
+
+
+
     }
+
+
 
     override fun getViewBiding(
         inflater: LayoutInflater,
