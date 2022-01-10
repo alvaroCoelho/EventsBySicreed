@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/txTitleCheckin"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -23,8 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
+        android:textColor="@color/white"
         android:inputType="textPersonName"
-        android:text="@string/type_your_name_here"
+        android:hint="@string/type_your_name_here"
+        android:textColorHint="@color/white"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txTitleCheckin" />
@@ -35,7 +39,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:text="@string/type_your_email_here"
+        android:hint="@string/type_your_email_here"
+        android:textColorHint="@color/white"
+        android:text=""
+        android:textColor="@color/white"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
