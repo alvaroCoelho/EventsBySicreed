@@ -12,6 +12,7 @@ import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentDetailsEventBinding
 import com.br.eventbysicreed.ui.base.BaseFragment
 import com.bumptech.glide.Glide
+import com.jboxx.sharebottomsheetdialog.ShareBottomSheetDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,6 +35,10 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
             actionDetailsEventFragmentToCheckinEventFragment(eventModel)
             findNavController().navigate(action)
              }
+
+       /* btnShared.setOnClickListener {
+            ShareBottomSheetDialog.Builder
+        }*/
     }
 
     private fun onLoadEvent(eventModel: EventModel)= with(binding){
