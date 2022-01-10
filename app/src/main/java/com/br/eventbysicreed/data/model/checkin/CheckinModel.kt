@@ -6,12 +6,12 @@ import java.io.Serializable
 data class CheckinModel (
 
     @SerializedName("id")
-    val id: Int,
+    var id: Int,
     @SerializedName("eventId")
-    val eventId: Int,
+    var eventId: Int,
     @SerializedName("name")
-    val name: String,
+    var name: String,
     @SerializedName("email")
-    val email: String
+    var email: String
 
 ):Serializable

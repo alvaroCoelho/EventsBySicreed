@@ -7,22 +7,22 @@ import java.io.Serializable
 data class EventModel(
 
     @SerializedName("id")
-    val id:Int,
+    var id:Int,
     @SerializedName("title")
-    val title:String,
+    var title:String,
     @SerializedName("price")
-    val price:String,
+    var price:String,
     @SerializedName("latitude")
-    val latitude:String,
+    var latitude:String,
     @SerializedName("longitude")
-    val longitude:String,
+    var longitude:String,
     @SerializedName("image")
-    val image:String,
+    var image:String,
     @SerializedName("description")
-    val description:String,
+    var description:String,
     @SerializedName("date")
-    val date:String,
+    var date:String,
     @SerializedName("people")
-    val people: List<PeopleModel>
+    var people: List<PeopleModel>
 
 ):Serializable

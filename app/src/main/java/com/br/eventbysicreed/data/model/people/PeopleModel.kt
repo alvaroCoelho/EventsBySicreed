@@ -4,5 +4,5 @@ import java.io.Serializable
 
 data class PeopleModel(
 
-    val id:Int
+    var id:Int
 ):Serializable
