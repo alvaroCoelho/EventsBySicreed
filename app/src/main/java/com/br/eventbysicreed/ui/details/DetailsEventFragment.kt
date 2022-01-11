@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.br.eventbysicreed.R
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentDetailsEventBinding
 import com.br.eventbysicreed.ui.base.BaseFragment
@@ -48,6 +49,7 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
         tvDateEventDetails.text = formatDate(eventModel.date.toLong())
         Glide.with(requireContext())
             .load(eventModel.image.toString())
+            .error(com.br.eventbysicreed.R.drawable.event)
             .into(imgEventDetails)
 
     }

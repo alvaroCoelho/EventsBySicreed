@@ -31,12 +31,6 @@ fun shareContent(title: String?, description: String?, context: Context) {
     )
 }
 
- fun getDateString(time: String): String {
-    val simpleDateFormat = SimpleDateFormat("dd MMMM yyyy, HH:mm:ss")
-    return simpleDateFormat.format(time.toLong())
-
-}
-
 fun formatDate(formatDate: Long): String? {
     formatDate?.let {
         return formatDate(Date(it), DateFormat.SHORT)

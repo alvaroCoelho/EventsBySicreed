@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.br.eventbysicreed.R
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.ItemEventBinding
 import com.br.eventbysicreed.util.formatDate
-import com.br.eventbysicreed.util.getDateString
 import com.br.eventbysicreed.util.limitDescription
 import com.bumptech.glide.Glide
 
@@ -50,11 +50,12 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
         holder.binding.apply {
             tvTitleEvent.text = event.title
             tvDateEvent.text = formatDate(event.date.toLong())
-            tvDescriptionEvent.text = event.description.limitDescription(100)
+            tvDescriptionEvent.text = event.description.limitDescription(400)
             tvPriceEvent.text = event.price
 
             Glide.with(holder.itemView.context)
                 .load(event.image.toString())
+                .error(R.drawable.event)
                 .into(imgEvent)
         }
 
