@@ -16,3 +16,7 @@ automaticamente. Para uso foi usado o Dagger também.
 StateFlow - Com o uso de corrotina, o StateFlow permite que os fluxos emitam atualizações de estado de maneira otimizada e valores para vários consumidores.Ótima opção para classes que precisam manter o estado mutável obersvável.
 
 Retrofit - Além de permitir uma implementação simples e ser um dos frameworks mais usados no mercado, com o OkHttp é tranquilo, por exemplo, interceptar a requisição e mudar da forma que você precisa.
+
+Navigation Components - Para a navegação das páginas esse framework facilita a montagem da navegação e também a passagem de objetos quando necessário.
+
+Glide - Framework de fácil uso para renderização de imagem provenientes a uma URL.
