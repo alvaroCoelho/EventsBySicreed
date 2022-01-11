@@ -1,5 +1,6 @@
 package com.br.eventbysicreed.ui.details
 
+import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,8 +12,8 @@ import com.br.eventbysicreed.data.model.checkin.CheckinModel
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentDetailsEventBinding
 import com.br.eventbysicreed.ui.base.BaseFragment
+import com.br.eventbysicreed.util.shareContent
 import com.bumptech.glide.Glide
-import com.jboxx.sharebottomsheetdialog.ShareBottomSheetDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -36,9 +37,9 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
             findNavController().navigate(action)
              }
 
-       /* btnShared.setOnClickListener {
-            ShareBottomSheetDialog.Builder
-        }*/
+        btnShared.setOnClickListener {
+            shareContent(eventModel?.title, eventModel?.description, requireContext())
+        }
     }
 
     private fun onLoadEvent(eventModel: EventModel)= with(binding){
@@ -49,9 +50,6 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
         Glide.with(requireContext())
             .load(eventModel.image.toString())
             .into(imgEventDetails)
-
-
-
 
     }
 
