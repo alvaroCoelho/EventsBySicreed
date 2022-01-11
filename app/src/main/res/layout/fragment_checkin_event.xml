@@ -9,7 +9,8 @@
     <TextView
         android:id="@+id/txTitleCheckin"
         android:textColor="@color/white"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:textSize="30dp"
@@ -20,12 +21,16 @@
 
     <EditText
         android:id="@+id/edTextPersonName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:layout_marginTop="30dp"
         android:ems="10"
+        app:boxStrokeColor="@color/white"
         android:textColor="@color/white"
         android:inputType="textPersonName"
+        android:outlineSpotShadowColor="@color/white"
+        android:textColorHighlight="@color/white"
         android:hint="@string/type_your_name_here"
         android:textColorHint="@color/white"
         android:text=""
@@ -35,7 +40,8 @@
 
     <EditText
         android:id="@+id/etEmailAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
