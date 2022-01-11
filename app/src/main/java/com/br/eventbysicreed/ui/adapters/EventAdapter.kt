@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.ItemEventBinding
+import com.br.eventbysicreed.util.formatDate
+import com.br.eventbysicreed.util.getDateString
 import com.br.eventbysicreed.util.limitDescription
 import com.bumptech.glide.Glide
 
@@ -47,7 +49,7 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
         val event = events[position]
         holder.binding.apply {
             tvTitleEvent.text = event.title
-            tvDateEvent.text = event.date
+            tvDateEvent.text = formatDate(event.date.toLong())
             tvDescriptionEvent.text = event.description.limitDescription(100)
             tvPriceEvent.text = event.price
 
