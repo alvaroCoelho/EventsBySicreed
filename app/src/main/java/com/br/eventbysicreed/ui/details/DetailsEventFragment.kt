@@ -1,6 +1,5 @@
 package com.br.eventbysicreed.ui.details
 
-import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.br.eventbysicreed.data.model.checkin.CheckinModel
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentDetailsEventBinding
 import com.br.eventbysicreed.ui.base.BaseFragment
+import com.br.eventbysicreed.util.formatDate
 import com.br.eventbysicreed.util.shareContent
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,7 +45,7 @@ class DetailsEventFragment : BaseFragment<FragmentDetailsEventBinding, DetailsEv
         tvNameEventDetails.text = eventModel.title
         tvDescriptionEventDetails.text = eventModel.description
         tvPriceEventDetails.text = eventModel.price
-        tvDateEventDetails.text = eventModel.date
+        tvDateEventDetails.text = formatDate(eventModel.date.toLong())
         Glide.with(requireContext())
             .load(eventModel.image.toString())
             .into(imgEventDetails)
