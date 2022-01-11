@@ -11,4 +11,6 @@
     <string name="type_your_email_here">Digite seu email aqui</string>
     <string name="confirm">Confirmar</string>
     <string name="share_with">Compartilhar com...</string>
+    <string name="sucess_checkin">Checkin Realizado com Sucesso</string>
+    <string name="error_checkin">Erro ao tentar realizar o Checkin</string>
 </resources>

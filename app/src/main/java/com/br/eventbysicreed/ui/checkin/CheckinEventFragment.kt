@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
+import com.br.eventbysicreed.R
 import com.br.eventbysicreed.data.model.checkin.CheckinModel
 import com.br.eventbysicreed.data.model.event.EventModel
 import com.br.eventbysicreed.databinding.FragmentCheckinEventBinding
@@ -45,10 +46,10 @@ class CheckinEventFragment : BaseFragment<FragmentCheckinEventBinding, CheckinEv
         viewModel.checkinEvent.collect{ resource ->
             when(resource){
                 is ResourceState.Sucess ->{
-                    toast("deu certoooo")
+                    toast(getString(R.string.sucess_checkin))
                 }
                 is ResourceState.Error -> {
-                    toast("deu errado")
+                    toast(getString(R.string.error_checkin))
                 }
             }
         }
