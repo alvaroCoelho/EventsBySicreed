@@ -9,6 +9,7 @@ nessa arquitetura os filhos não tem referência direta do pai, eles só tem a r
 
 
 frameworks:
+
 Hilt - Oferece uma maneira padrão de fazer DI no aplicativo, fornecendo contêineres para cada componente do Android no projeto e gerenciando o ciclo de vida do contêineres
 automaticamente. Para uso foi usado o Dagger também.
 
