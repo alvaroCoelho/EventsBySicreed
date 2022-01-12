@@ -18,7 +18,6 @@ import com.br.eventbysicreed.util.show
 import com.br.eventbysicreed.util.toast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
